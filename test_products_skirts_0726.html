@@ -135,7 +135,7 @@
         } 
 
 
-
+        /* 아래 물품 이미지 입니다 */
         .content-img {
           margin: 5px;
           
@@ -150,12 +150,15 @@
           display: flex;
           
         }
+
+        /* 상단 헤더 상품 이미지 입니다 */
         .content-img-top {
           /* margin: 15px; */
           
           display: flex;
           justify-content: space-between;
           
+         
           height: 570px;
           width: 400px;
           
@@ -169,6 +172,8 @@
           
         }
         
+
+        /* 상품 헤더 */
         .main-top-information{
           margin: 0 auto;
           width: 1200px;
@@ -182,10 +187,15 @@
           display: flex;
           justify-content: space-between;
         }
+
+        /* 상품 헤더 왼쪽 상단 */
         .top-width{
+          
           width: 744px;
           display: flex;
-          align-items: center;
+          
+          justify-content: center;
+          /* flex-direction: column; */
           border-color: rgb(194, 194, 194);
           border-style: solid;
           border-width: 1px;
@@ -194,13 +204,22 @@
           
           
         }
+        /* 상품 헤더 왼쪽 상단안에 있는 h2 제목 */
         .top-width > h2{
           display: flex;
+          /* flex-direction: row;
+          align-items: flex-start; */
           flex: 1;
-          /* justify-content: center; */
+          justify-content: center;
         }
+        /* 상품 헤더 왼쪽 상단안에 있는 글씨 */
         .top-width > h4{
-          flex: 5;
+          display: flex;
+          align-items: center;
+          
+          flex: 4;
+          width: 700px;
+          
         }
         
 
@@ -213,31 +232,40 @@
         }
         .products > p, h5{
           display: flex;
+          
           align-items: center;
           justify-content: center;
           margin: 0px;
           padding: 0px;
           
         }
+        /* 상품 설명 글자, 사이즈, */
+        /* .products-info{
+          display: flex;
+          flex-direction: column;
+          flex: 5;
+        } */
         .products {
           display: flex;
           flex-direction: column;
           width: 300px;
+          height: 450px;
           flex-wrap: wrap;
           margin-bottom: 20px;
           
         }
+        /* 여기서 flex을 줘서 요소 값이 곂치지 않게 합니다 */
         .products > .content-img{
-          
-          width: 300px;
-          height: 300px;
+          display: flex;
+          flex: 2;
+         
         }
         .content-wrap-img{
           display: flex;
           justify-content: center;
           width: 300px;
-          height: 300px;
-          
+          height: 360px;
+          /* flex: 2; */
         }
         
   </style>
@@ -431,7 +459,7 @@
     <!--Main-content-->
     <div class="main-content-product">
       <div class="new-main">
-        <h3>Beatiful Women Dresses</h3>
+        <h3>Beatiful Women Skirts</h3>
       </div>
 
       <!--new-main으로 안의 div구성-->
@@ -441,30 +469,35 @@
         <div class="products">
           <div class="content-img">
             <!--한번 더 감싸서 모양을 유지합니다-->
-            <div class="content-wrap-img">
-              <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="rounded float-start" alt="...">
-
-            </div>
+            <a href="#">
+              <div class="content-wrap-img">
+              
+                <img src="https://images.unsplash.com/photo-1577155848406-b53ebd277c72?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="rounded float-start" alt="...">
+              
+              </div>
+            </a>
           </div>  
-          <div>
-            <h5>white dress</h5>
-          </div>
-          
+          <h5>red checked pattern skirts</h5>
+        
+        
           <p>size: S M L</p>
           <p>29.99$</p>
+          
         </div>
         <!--End One of Products-->
 
         <div class="products">
 
           <div class="content-img">
-            <div class="content-wrap-img">
-              <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=417&q=80" class="rounded float" alt="...">
-            
-            
-            </div>
+            <a href="#">
+              <div class="content-wrap-img">
+                
+                <img id="img1" src="https://images.unsplash.com/photo-1590400516695-36708d3f964a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80" class="rounded float" alt="...">
+                
+              </div>
+           </a>
           </div>
-          <h5>red dress</h5>
+          <h5>white skirts</h5>
           <p>size: S M L</p>
           <p>45.99$</p>
 
@@ -472,33 +505,39 @@
 
         <div class="products">
           <div class="content-img">
-            <div class="content-wrap-img">
-              <img src="https://images.unsplash.com/photo-1550639525-c97d455acf70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" class="rounded float" alt="...">
-            </div>  
+            <a href="#">
+              <div class="content-wrap-img">
+                <img src="https://images.unsplash.com/photo-1551163943-3f6a855d1153?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80" class="rounded float" alt="...">
+              </div>  
+            </a>
           </div>
-          <h5>black dress</h5>
+          <h5>light brown skirts</h5>
           <p>size: S M L</p>
           <p>32.99$</p>
         </div>
 
         <div class="products" id="content-end">
           <div class="content-img">
-            <div class="content-wrap-img">
-              <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=351&q=80" class="rounded float" alt="...">
-            </div>
+            <a href="#">
+              <div class="content-wrap-img">
+                <img id="img" src="https://images.unsplash.com/photo-1583846783214-7229a91b20ed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80" class="rounded float" alt="...">
+              </div>
+            </a>
           </div>
-          <h5>purple dress</h5>
+          <h5>black button skirts</h5>
           <p>size: S M L</p>
           <p>39.99$</p>
         </div>
 
         <div class="products">
           <div class="content-img">
-            <div class="content-wrap-img">
-              <img src="https://images.unsplash.com/photo-1612722432474-b971cdcea546?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80" class="rounded float" alt="...">
-            </div>
+            <a href="#">
+              <div class="content-wrap-img">
+                <img id="img2" src="https://images.unsplash.com/photo-1561932850-f13404855e53?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=313&q=80" class="rounded float" alt="...">
+              </div>
+            </a>
           </div>
-          <h5>yellow dress</h5>
+          <h5>long yellow skirts</h5>
           <p>size: S M L</p>
           <p>42.99$</p>
         </div>
@@ -633,5 +672,37 @@
     </div>
     <!--Footer End-->
 
+    <!-- 나중에 JS파일을 따로 뺍니다 -->
+<script>
+  const img = document.getElementById('img');
+  // 올리면 변하는 사진
+  img.addEventListener('mouseover', (event)=> {
+    img.src="https://images.unsplash.com/photo-1583846717393-dc2412c95ed7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80";
+  });
+  // 원래 사진
+  img.addEventListener('mouseout', (event) => {
+    img.src="https://images.unsplash.com/photo-1583846783214-7229a91b20ed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80";
+  });
+  
+  const img1 = document.getElementById('img1');
+  // 올리면 변하는 사진
+  img1.addEventListener('mouseover', (event)=> {
+    img1.src="https://images.unsplash.com/photo-1552027933-f034ba955d49?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=333&q=80";
+  });
+  // 원래 사진
+  img1.addEventListener('mouseout', (event) => {
+    img1.src="https://images.unsplash.com/photo-1590400516695-36708d3f964a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80";
+  });
+
+  const img2 = document.getElementById('img2');
+  // 올리면 변하는 사진
+  img2.addEventListener('mouseover', (event)=> {
+    img2.src="https://images.unsplash.com/photo-1561932850-4b65ce092609?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80";
+  });
+  // 원래 사진
+  img2.addEventListener('mouseout', (event) => {
+    img2.src="https://images.unsplash.com/photo-1561932850-f13404855e53?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=313&q=80";
+  });
+</script>
 </body>
 </html>
