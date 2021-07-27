@@ -38,14 +38,24 @@
   border-width: 1px;
   box-sizing: border-box;
   padding-top: 13px;
-  /* padding-bottom: 13px; */
+  padding-bottom: 13px;
   /* width: 20px; */
 }
-.information > p,
-h3 {
+.information > h3{
+  display: flex;
+  flex: 4;
+  justify-content: center;
+  align-items: center;
+}
+
+.information > p
+ {
+  display: flex;
+  flex: 1;
   padding: 0px;
   /* height: 0px; */
   align-items: center;
+  justify-content: center;
 }
 /* 이미지 */
 .product-img {

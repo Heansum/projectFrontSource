@@ -1,0 +1,42 @@
+.main{
+    margin-top: 100px;
+    height: 600px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+.sidebars{
+    display: flex;
+    flex: 1;
+}
+
+.section{
+    display: flex;
+    flex: 4;
+    flex-flow: column;
+    padding-right: 30px;
+    margin-right: 40px;
+}
+.contents-container{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 95%;
+    margin-left: 70px;
+   
+  }
+.button{
+    width: 30px;
+    height: 20px;
+}
+/* #delete-button{
+    width: 50px;
+    height: 20px;
+} */
+
+.delete-button{
+    width: 60px;
+    height: 30px;
+}
