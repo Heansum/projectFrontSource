@@ -106,10 +106,15 @@
           padding: 3px;
           
         }
+
+        /* 변화 된 코드 로그인 */
         .icon{
           display: flex;
-          width:30px;
+          width:100px;
+          height: 30px;
+          /* flex-flow: column; */
           justify-content: space-between;
+          align-items: center;
 
         }
         hr{
@@ -245,11 +250,13 @@
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
                   <div class="icon">
-                    
-                    <div>
-                      <a href="#"><img src="https://img.icons8.com/windows/32/000000/user-male-circle.png"/></a>
-                    </div>
+                    <!-- /* 변화 된 코드 로그인 */ -->
+                    <button type="button" class="btn btn-light">Login</button>
+                    <!-- <a href="#"> -->
+                      <img src="https://img.icons8.com/ios-glyphs/30/000000/login-rounded-right--v1.png"/>
+                    <!-- </a> -->
                   </div>
+
                   <a class="navbar-brand"></a>
                   <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="키워드로 검색 예)히트택" aria-label="Search">

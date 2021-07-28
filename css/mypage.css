@@ -1,42 +1,90 @@
-.main{
-    margin-top: 100px;
-    height: 600px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-.sidebars{
-    display: flex;
-    flex: 1;
+.main {
+  margin-top: 100px;
+  height: 600px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.section{
-    display: flex;
-    flex: 4;
-    flex-flow: column;
-    padding-right: 30px;
-    margin-right: 40px;
+.sidebars {
+  display: flex;
+  flex: 1;
 }
-.contents-container{
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    width: 95%;
-    margin-left: 70px;
-   
-  }
-.button{
-    width: 30px;
-    height: 20px;
+
+.section {
+  display: flex;
+  flex: 4;
+  flex-flow: column;
+  padding-right: 30px;
+  margin-right: 40px;
+}
+.contents-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 95%;
+  margin-left: 70px;
+}
+.button {
+  width: 30px;
+  height: 20px;
 }
 /* #delete-button{
     width: 50px;
     height: 20px;
 } */
 
-.delete-button{
-    width: 60px;
-    height: 30px;
+.delete-button {
+  width: 60px;
+  height: 30px;
+}
+
+/* bucket 박스와 title의 위치 관계입니다 */
+.title {
+}
+/* 테이블 row의 th 값 정렬입니다 */
+.th-align {
+  text-align: center;
+}
+
+/* 테이블에서 판매가, 수량, 합계, 삭제버튼 align입니다 */
+.info-align {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+}
+.info-align-box {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+/* 상품정보 미니 박스 입니다 */
+.product-info-box {
+  display: flex;
+  width: 250px;
+
+  border: 0px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  /* padding-right: 200px; */
+}
+/* 상품정보 이미지입니다 */
+.minibox-img {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  flex: 1;
+}
+/* 상품정보 입니다 */
+.product-inforamtion {
+  display: flex;
+  width: 150px;
+  height: 100px;
+  flex: 1;
+  align-items: center;
 }
