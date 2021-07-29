@@ -10,9 +10,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNISHOP</title>
+    <title>UNISHOP Admin | User log</title>
+    <link rel="stylesheet" type="text/css" href="./css/sidebars.css">
+    <link rel="stylesheet" type="text/css" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/detail.css">
     <style>
-  
+        
         .d-flex{
             width: 400px;
         }
@@ -43,15 +46,17 @@
           width: 1200px;
           margin: 0px auto;
         }
-        .main{
-          margin-top: 100px;
-          height: 600px;
+        main{
+          margin-top: 30px;
+          height: 1200px;
+          max-height: 1400px;
         }
         
         .content-array{
           width: 1200px;
           
         }
+
 
 
 
@@ -105,14 +110,14 @@
         }
         .icon{
           display: flex;
-          width: 70px;
+          width:30px;
           justify-content: space-between;
 
         }
-        hr{
+        /* hr{
           width: 1200px;
           margin: 0 auto;
-        }
+        } */
         .logo{
           height: 60px;
         }
@@ -140,8 +145,60 @@
           margin: 0 auto;
           font-family: 'UniqloProRegular','UniqloProLight','UniqloProBold','NanumSquare', sans-serif;
           padding: 20px 0px;
-          width: 1200px;
+          /* width: 1200px; */
         }
+
+
+
+        .sidebars{
+          display: flex;
+        }
+
+        .section{
+          margin-left: 180px;
+          width: 70%;
+          
+
+        }
+        article{
+          height: 500px;
+        }
+        .contents > div > img{
+          display: block;
+          height: 100px;
+          width: 100px;
+        }
+        .contents{
+          display: inline-block;
+          
+          width: 70%;
+          align-items: center;
+          width: 150px;
+        }
+        /* .contents > hr{
+          display: block;
+          width: 80%;
+        } */
+        .contents > p{
+          display: inline-block;
+          width: auto;
+        }
+        /* .contents-container{
+          display: inline-block;
+          justify-content: space-between;
+          width: 95%;
+          margin-left: 70px;
+        } */
+        /* .section > div > h2 {
+          width: 1200px;
+        } */
+
+
+
+
+
+
+
 
   </style>
 </head>
@@ -242,23 +299,10 @@
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
                   <div class="icon">
-                    <div>
-                      <a href="#"><img src="https://img.icons8.com/windows/32/000000/shopping-cart.png"/></a>
-                    </div>
-                    <div>
-                      <a href="#">
-                        <img src="https://img.icons8.com/windows/32/000000/user-male-circle.png" data-bs-toggle="dropdown"/>
-                        <!-- <div class="input-group mb-3">
-                          <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Separated link</a></li>
-                          </ul>
-                        </div> -->
-                      </a>
-                    </div>
+                    
+                    <!-- <div>
+                      <a href="#"><img src="https://img.icons8.com/windows/32/000000/user-male-circle.png"/></a>
+                    </div> -->
                   </div>
                   <a class="navbar-brand"></a>
                   <form class="d-flex">
@@ -279,7 +323,170 @@
     </div>
     <!--header End-->
 
-    
+    <main>
+    <!--side bar-->
+      <div class="sidebars">
+        <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+          <a href="#" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+            <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+            <span class="fs-5 fw-semibold">UNISHOP Administrator</span>
+          </a>
+          <ul class="list-unstyled ps-0">
+            <li class="mb-1">
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                Product Management
+              </button>
+              <div class="collapse show" id="home-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="link-dark rounded">Overview</a></li>
+                  <li><a href="#" class="link-dark rounded">New</a></li>
+                  <li><a href="#" class="link-dark rounded">Delete</a></li>
+                  <li><a href="#" class="link-dark rounded">Reports</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mb-1">
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                Dashboard
+              </button>
+              <div class="collapse" id="dashboard-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="link-dark rounded">Overview</a></li>
+                  <li><a href="#" class="link-dark rounded">Weekly</a></li>
+                  <li><a href="#" class="link-dark rounded">Monthly</a></li>
+                  <li><a href="#" class="link-dark rounded">Annually</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mb-1">
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                Orders
+              </button>
+              <div class="collapse" id="orders-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="link-dark rounded">New</a></li>
+                  <li><a href="#" class="link-dark rounded">Processed</a></li>
+                  <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                  <li><a href="#" class="link-dark rounded">Returned</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="border-top my-3"></li>
+            <li class="mb-1">
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                Account
+              </button>
+              <div class="collapse" id="account-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="link-dark rounded">New...</a></li>
+                  <li><a href="#" class="link-dark rounded">Profile</a></li>
+                  <li><a href="#" class="link-dark rounded">Settings</a></li>
+                  <li><a href="#" class="link-dark rounded">Sign out</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <!--side bar End-->
 
+    <!--Admin section-->
+      
+      <section class="section">
+        <div>
+          <h2>New Orders</h2>
+        </div>
+
+        <hr/>
+        <!-- <br>
+        <div>
+          <h4>New</h4>
+        </div> -->
+        <br>
+        <!-- log 테이블 -->
+        <!-- DB에서 가져와서 던져줌 -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">UserId</th>
+              <th scope="col">UserName</th>
+              <th scope="col">Address</th>
+              <th scope="col">order-date-time</th>
+              <th scope="col">product</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- increment number -->
+              <th scope="row">3</th>
+              <!-- id -->
+              <td>lovepeople</td>
+              <!-- real name -->
+              <td>Nick</td>
+              <!-- address -->
+              <td>S. F 36349</td>
+              <!-- time -->
+              <td>21-07-27</td>
+
+            </tr>
+            <tr>
+              <!-- increment number -->
+              <th scope="row">2</th>
+              <!-- id -->
+              <td>markgod</td>
+              <!-- real name -->
+              <td>Mark</td>
+              <!-- address -->
+              <td>L. A street 30349</td>
+              <!-- time -->
+              <td>21-07-25</td>
+
+            </tr>
+            <tr>
+              <!-- increment number -->
+              <th scope="row">1</th>
+              <!-- id -->
+              <td>markgod</td>
+              <!-- real name -->
+              <td>Mark</td>
+              <!-- address -->
+              <td>L.A street 30349</td>
+              <!-- time -->
+              <td>21-07-23</td>
+
+            </tr>
+           
+          </tbody>
+        </table>
+      </section>
+
+
+
+
+
+
+    </main>
+
+    <!--footer-->
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <p>Footer</p>
+    </div>
 </body>
+<script>
+  
+  function selectAll(selectAll)  {
+    const checkboxes 
+      = document.querySelectorAll('input[type="checkbox"]');
+    
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = selectAll.checked
+    })
+  }
+
+// DB에서 판매가를 변수로 담아와서 수량과 합계가 변화가 됩니다.
+
+
+
+</script>
 </html>
