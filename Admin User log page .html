@@ -408,16 +408,31 @@
         <table class="table">
           <thead>
             <tr>
+              <th scope="col"></th>
+              
               <th scope="col">#</th>
               <th scope="col">UserId</th>
               <th scope="col">UserName</th>
               <th scope="col">Address</th>
               <th scope="col">order-date-time</th>
+
+              <!-- modal 써서 product 목록 완성 -->
               <th scope="col">product</th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <th scope="row">
+                <!-- 체크박스 -->
+                <div class="info-align-box">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    
+                    </label>
+                  </div>
+                </div>
+              </th>
               <!-- increment number -->
               <th scope="row">3</th>
               <!-- id -->
@@ -429,8 +444,42 @@
               <!-- time -->
               <td>21-07-27</td>
 
+              <!-- 모달 영역 -->
+              <td>
+                <div id="modal">
+    
+                  <div id="root">
+   
+                    <button type="button" id="modal_opne_btn">모달 창 열기</button>
+                       
+                  </div>
+                  <div class="modal_content">
+                      
+                      <h2>모달 창</h2>
+                    
+                      <p>모달 창 입니다.</p>
+                    
+                      <button type="button" id="modal_close_btn">모달 창 닫기</button>
+                    
+                  </div>
+                
+                  <div class="modal_layer"></div>
+                </div>
+              </td>
+
             </tr>
             <tr>
+              <th scope="row">
+                <!-- 체크박스 -->
+                <div class="info-align-box">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    
+                    </label>
+                  </div>
+                </div>
+              </th>
               <!-- increment number -->
               <th scope="row">2</th>
               <!-- id -->
@@ -444,6 +493,17 @@
 
             </tr>
             <tr>
+              <th scope="row">
+                <!-- 체크박스 -->
+                <div class="info-align-box">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    
+                    </label>
+                  </div>
+                </div>
+              </th>
               <!-- increment number -->
               <th scope="row">1</th>
               <!-- id -->
@@ -459,6 +519,23 @@
            
           </tbody>
         </table>
+
+        <div class="checkbox-area">
+          <!-- 체크박스 -->
+          <div class="info-align-box">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="selectall" id="flexCheckDefault" onclick="selectAll(this)">
+              <label class="form-check-label" for="flexCheckDefault">
+                <div>전체선택</div>
+              </label>
+            </div>
+            <button type="button" class="btn btn-danger">
+              삭제
+
+            </button>
+          </div>
+          
+        </div>
       </section>
 
 
@@ -484,7 +561,18 @@
     })
   }
 
-// DB에서 판매가를 변수로 담아와서 수량과 합계가 변화가 됩니다.
+
+// User log DB에서 배송이 되면 삭제 해줍니다.
+
+
+
+    document.getElementById("modal_open_btn").onclick = function() {
+        document.getElementById("modal").style.display="block";
+    }
+   
+    document.getElementById("modal_close_btn").onclick = function() {
+        document.getElementById("modal").style.display="none";
+    }   
 
 
 
